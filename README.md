@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+Younes Benzian
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+Blauwe piste
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Surface
  
 </details>
 
@@ -31,6 +31,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Je website
+https://www.nike.com/nl/
 
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
