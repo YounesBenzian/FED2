@@ -22,7 +22,7 @@ Younes Benzian
 Blauwe piste
 
   #### Je focus:
-  Surface
+  Responsive
  
 </details>
 
