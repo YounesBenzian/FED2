@@ -37,10 +37,10 @@ https://www.nike.com/nl/
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
-
-  #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+[](https://www.nike.com/nl/)
+](https://www.nike.com/nl/)
+#### Screenshot(s) van de eerste pagina (small screen): 
+Home <img width="1920" height="5641" alt="image" src="https://github.com/user-attachments/assets/d398ac2a-ea9d-498c-9f8e-b13e6e4e4741" />
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
