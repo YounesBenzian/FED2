@@ -45,7 +45,7 @@ Home <img width="1920" height="5641" alt="image" src="readme-images/home.png" />
   <img src="readme-images/nike-just-do-it-nike-nl-2026-09-08-13-22-14.png">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Football 
   <img src="readme-images/nike-football-nike-nl-2026-09-08-13-26-17.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
