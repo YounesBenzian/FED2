@@ -41,7 +41,7 @@ https://www.nike.com/nl/
 [](https://www.nike.com/nl/)
 ](https://www.nike.com/nl/)
 #### Screenshot(s) van de eerste pagina (small screen): 
-Home <img width="1920" height="5641" alt="image" src="https://github.com/user-attachments/assets/d398ac2a-ea9d-498c-9f8e-b13e6e4e4741" />
+Home <img width="1920" height="5641" alt="image" src="readme-images/nike-football-nike-nl-2026-09-08-13-26-17" />
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
