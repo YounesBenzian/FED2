@@ -41,7 +41,7 @@ https://www.nike.com/nl/
 [](https://www.nike.com/nl/)
 ](https://www.nike.com/nl/)
 #### Screenshot(s) van de eerste pagina (small screen): 
-Home <img width="1920" height="5641" alt="image" src="readme-images/nike-football-nike-nl-2026-09-08-13-26-17.png" />
+Home <img width="1920" height="5641" alt="image" src="readme-images/nike-just-do-it-nike-nl-2026-09-08-13-22-14.png" />
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
