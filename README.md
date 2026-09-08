@@ -7,7 +7,10 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
 
 
-
+  3 CSS PAGINAS, 1 VOOR BEIDE (DENK AAN LAYOUT FONTS ETC) 1 VOOR HOME EN 2 VOOR VOETBAL.
+  3 CSS PAGINAS, 1 VOOR BEIDE (DENK AAN LAYOUT FONTS ETC) 1 VOOR HOME EN 2 VOOR VOETBAL.
+  3 CSS PAGINAS, 1 VOOR BEIDE (DENK AAN LAYOUT FONTS ETC) 1 VOOR HOME EN 2 VOOR VOETBAL.
+  3 CSS PAGINAS, 1 VOOR BEIDE (DENK AAN LAYOUT FONTS ETC) 1 VOOR HOME EN 2 VOOR VOETBAL.
 
 
 ## Jij
