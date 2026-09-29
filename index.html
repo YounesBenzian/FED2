@@ -1,21 +1,270 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy FED2526</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<meta name="author" content="Younes Benzian">
+	<meta name="description" content="Namaak van de homepagina van Nike, gemaakt voor Frontend Development.">
+
+	<title>Nike. Just Do It. Nike NL</title>
+
+	<link rel="icon" href="images/logo-nike.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/home.css">
+
+	<script src="scripts/script.js" defer></script>
 </head>
 
 <body>
-	<h1>Howdy FED2526</h1>
 
-	<script defer src="scripts/script.js"></script>
+	<!-- skiplink staat expres als allereerst\e.  -->
+	<a href="#inhoud">Direct naar de inhoud</a>
+
+	<header>
+
+		<a href="index.html">
+			<img src="images/logo-nike.svg" alt="Nike, naar de homepagina">
+		</a>
+
+		<nav aria-label="Snelmenu">
+			<ul>
+				<li><a href="detail.html"><img src="images/search.svg" alt="Zoeken"></a></li>
+				<li><a href="detail.html"><img src="images/user.svg" alt="Inloggen"></a></li>
+				<li><a href="detail.html"><img src="images/cart.svg" alt="Winkelwagen"></a></li>
+			</ul>
+		</nav>
+
+		<!-- ariacontrols moet naar een id wijzen, daarom heb ik hier toch een id gebruikt. zonder id kon ik nergens naar verwijzen -->
+		<button type="button" aria-controls="hoofdmenu" aria-expanded="false">
+			<img src="images/menu.svg" alt="Menu">
+		</button>
+
+		<nav id="hoofdmenu" aria-label="Hoofdmenu">
+			<ul>
+				<li><a href="index.html" aria-current="page">Nieuw</a></li>
+				<li><a href="detail.html">Heren</a></li>
+				<li><a href="detail.html">Dames</a></li>
+				<li><a href="detail.html">Kids</a></li>
+				<li><a href="detail.html">Voetbal</a></li>
+				<li><a href="detail.html">Sport</a></li>
+				<li><a href="detail.html">Sale</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main id="inhoud">
+
+		
+		<section>
+			<img src="images/hero.webp" alt="Sporter zit in de kleedkamer voor de wedstrijd">
+			<h1>Play mind games</h1>
+			<p>Zet je geest op scherp met de Nike Mind en de 24.7 collectie.</p>
+			<a href="detail.html">Shop de collectie</a>
+		</section>
+
+		<section>
+			<img src="images/banner-fleece.webp" alt="Groep mensen in grijze joggingpakken in een kapsalon">
+			<h2>Studio Fleece</h2>
+			<p>Zacht vanbinnen, stevig vanbuiten. Voor de dagen dat je nergens heen hoeft.</p>
+			<a href="detail.html">Shop fleece</a>
+		</section>
+
+		<section>
+			<img src="images/banner-skims.webp" alt="Model in een blauwe top en broek met zonnebril">
+			<h2>Nike SKIMS</h2>
+			<p>Strakke lijnen voor in en om de studio.</p>
+			<a href="detail.html">Shop studio</a>
+		</section>
+
+		<section>
+			<img src="images/banner-acg.webp" alt="Twee hardlopers op een berghelling">
+			<h2>ACG Chamo Camo</h2>
+			<p>Gemaakt voor het pad dat niet op de kaart staat.</p>
+			<a href="detail.html">Shop ACG</a>
+		</section>
+
+		<section>
+			<img src="images/banner-court.webp" alt="Tennisser met twee rackets tegen een paarse achtergrond">
+			<h2>NikeCourt Slam City</h2>
+			<p>Tenniskleding die tegen een stootje kan.</p>
+			<a href="detail.html">Shop tennis</a>
+		</section>
+
+		<section>
+			<img src="images/banner-voetbal.webp" alt="Voetballer houdt een gouden Mercurial Superfly voor zijn gezicht">
+			<h2>Mercurial Superfly</h2>
+			<p>Onverslaanbaar snel. Onverwoestbare legacy.</p>
+			<a href="detail.html">Shop Mercurial</a>
+		</section>
+
+		<section>
+			<h2>Shop onze iconen</h2>
+
+			<!-- 14 stuks, maar op mobiel laat ik er maar 6 zien met nth-child(n + 7). alternatief was 2 aparte lijstjes maken maar dan staat alles dubbel in de html -->
+			 <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child -->
+			<ul>
+				<li>
+					<img src="images/icoon-1.webp" alt="Wit Nike T-shirt met een klein blauw logo op de borst">
+					<h3><a href="detail.html">Sportswear T-shirt</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-2.webp" alt="Witte Nike Air Force 1 van opzij">
+					<h3><a href="detail.html">Air Force 1</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-3.webp" alt="Rode Nike Pegasus Trail van opzij">
+					<h3><a href="detail.html">Pegasus Trail</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-4.webp" alt="Grijs met gele Nike Air Jordan 1 High van opzij">
+					<h3><a href="detail.html">Air Jordan 1</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-5.webp" alt="Grijs met groene Nike Air Max Plus van opzij">
+					<h3><a href="detail.html">Air Max Plus</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-6.webp" alt="Bruin met witte Nike Dunk Low van opzij">
+					<h3><a href="detail.html">Dunk Low</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-7.webp" alt="Zwart Nike T-shirt, gezien vanaf de achterkant">
+					<h3><a href="detail.html">Dri-FIT T-shirt</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-8.webp" alt="Roze met paarse Nike Pegasus van opzij">
+					<h3><a href="detail.html">Pegasus</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-9.webp" alt="Beige Nike Metcon trainingsschoen van opzij">
+					<h3><a href="detail.html">Metcon</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-10.webp" alt="Oranje thuisshirt van het Nederlands elftal">
+					<h3><a href="detail.html">Nederlands elftal</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-11.webp" alt="Witte Nike Air Jordan 4 met zwarte details van opzij">
+					<h3><a href="detail.html">Air Jordan 4</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-12.webp" alt="Mintgroene Nike Sabrina basketbalschoen van opzij">
+					<h3><a href="detail.html">Sabrina</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-13.webp" alt="Zwart met blauwe Nike Tatum basketbalschoen van opzij">
+					<h3><a href="detail.html">Tatum</a></h3>
+				</li>
+				<li>
+					<img src="images/icoon-14.webp" alt="Witte Nike Mercurial voetbalschoen van opzij">
+					<h3><a href="detail.html">Mercurial</a></h3>
+				</li>
+			</ul>
+
+			<!-- verdwijnt na stretch want dan passen alle iconen er wel op functieloos -->
+			<a href="detail.html">Toon alles</a>
+
+		</section>
+
+		<section>
+			<h2>Bladeren</h2>
+
+			
+			<ul>
+				<li>
+					<h3>Schoenen</h3>
+					<ul>
+						<li><a href="detail.html">Zwarte hardloopschoenen</a></li>
+						<li><a href="detail.html">Witte hardloopschoenen</a></li>
+						<li><a href="detail.html">Nike P-6000</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3>Kleding</h3>
+					<ul>
+						<li><a href="detail.html">Yogabroeken</a></li>
+						<li><a href="detail.html">Tech Fleece</a></li>
+						<li><a href="detail.html">Schoolkleding</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3>Kids</h3>
+					<ul>
+						<li><a href="detail.html">Zwarte meisjesschoenen</a></li>
+						<li><a href="detail.html">Zwarte kinderschoenen</a></li>
+						<li><a href="detail.html">Schoolschoenen</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3>Uitgelicht</h3>
+					<ul>
+						<li><a href="detail.html">Nieuwe sneakers</a></li>
+						<li><a href="detail.html">Nike nationale elftallen</a></li>
+						<li><a href="detail.html">Nike Run Club</a></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer>
+
+		
+		<nav aria-label="Footermenu">
+			<details>
+				<summary>Bronnen</summary>
+				<ul>
+					<li><a href="detail.html">Cadeaubonnen</a></li>
+					<li><a href="detail.html">Zoek een store</a></li>
+					<li><a href="detail.html">Nike Journal</a></li>
+					<li><a href="detail.html">Word member</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Help</summary>
+				<ul>
+					<li><a href="detail.html">Bestelstatus</a></li>
+					<li><a href="detail.html">Verzending en levering</a></li>
+					<li><a href="detail.html">Retourzendingen</a></li>
+					<li><a href="detail.html">Betaalmethodes</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Bedrijf</summary>
+				<ul>
+					<li><a href="detail.html">Over Nike</a></li>
+					<li><a href="detail.html">Nieuws</a></li>
+					<li><a href="detail.html">Werken bij Nike</a></li>
+					<li><a href="detail.html">Toegankelijkheid</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Communitykortingen</summary>
+				<ul>
+					<li><a href="detail.html">Student</a></li>
+					<li><a href="detail.html">Docent</a></li>
+					<li><a href="detail.html">Eerstehulpverleners</a></li>
+					<li><a href="detail.html">Zorgprofessionals</a></li>
+				</ul>
+			</details>
+		</nav>
+
+		<small>&copy; 2026 Nike, Inc. Schoolopdracht van Younes Benzian.</small>
+
+		<nav aria-label="Voorwaarden">
+			<ul>
+				<li><a href="detail.html">Gebruiksvoorwaarden</a></li>
+				<li><a href="detail.html">Verkoopvoorwaarden</a></li>
+				<li><a href="detail.html">Bedrijfsgegevens</a></li>
+				<li><a href="detail.html">Privacy- en cookiebeleid</a></li>
+			</ul>
+		</nav>
+
+	</footer>
+
 </body>
-	
+
 </html>

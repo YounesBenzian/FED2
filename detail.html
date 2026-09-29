@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Younes Benzian">
+	<meta name="description" content="Productpagina van de Nike P-6000, gemaakt voor Frontend Development.">
+
+	<title>Nike P-6000 schoenen. Nike NL</title>
+
+	<link rel="icon" href="images/logo-nike.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/detail.css">
+
+	<script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+
+	<a href="#inhoud">Direct naar de inhoud</a>
+
+	<header>
+
+		<a href="index.html">
+			<img src="images/logo-nike.svg" alt="Nike, naar de homepagina">
+		</a>
+
+		<nav aria-label="Snelmenu">
+			<ul>
+				<li><a href="index.html"><img src="images/search.svg" alt="Zoeken"></a></li>
+				<li><a href="index.html"><img src="images/user.svg" alt="Inloggen"></a></li>
+				<li><a href="index.html"><img src="images/cart.svg" alt="Winkelwagen"></a></li>
+			</ul>
+		</nav>
+
+		<button type="button" aria-controls="hoofdmenu" aria-expanded="false">
+			<img src="images/menu.svg" alt="Menu">
+		</button>
+
+		<nav id="hoofdmenu" aria-label="Hoofdmenu">
+			<ul>
+				<li><a href="index.html">Nieuw</a></li>
+				<li><a href="index.html">Heren</a></li>
+				<li><a href="index.html">Dames</a></li>
+				<li><a href="index.html">Kids</a></li>
+				<li><a href="index.html">Voetbal</a></li>
+				<li><a href="index.html">Sport</a></li>
+				<li><a href="index.html">Sale</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main id="inhoud">
+
+		<section>
+
+			<h1>Nike P-6000</h1>
+			<p>Schoenen</p>
+			<p>&euro; 119,99</p>
+
+			<!-- de productfotos. op mobiel is dit een caroussel waar je zijwaarts doorheen scrollt, vanaf 57em maak ik er een grid van met een smalle kolom links -->
+			<ul>
+				<li><img src="images/NIKE+P-6000 (3).avif" alt="De Nike P-6000 van bovenaf, een paar naast elkaar"></li>
+				<li><img src="images/NIKE+P-6000 (3).avif" alt="De Nike P-6000 van bovenaf met het Nike-logo op de tong"></li>
+				<li><img src="images/NIKE+P-6000 (4).avif" alt="De buitenzool van de Nike P-6000"></li>
+				<li><img src="images/schuin.avif" alt="De zijkant van de Nike P-6000 van dichtbij"></li>
+				<li><img src="images/zijkantboven (1).avif" alt="De veters van de Nike P-6000 van dichtbij"></li>
+				<li><img src="images/NIKE+P-6000 (2).avif" alt="De witte Nike P-6000 van de zijkant"></li>
+			</ul>
+
+			<form action="#" method="get">
+
+				<fieldset>
+					<legend>Kies je kleur</legend>
+					<label><input type="radio" name="kleur" value="wit-grijs" checked> Wit en grijs</label>
+					<label><input type="radio" name="kleur" value="zwart-wit"> Zwart en wit</label>
+					<label><input type="radio" name="kleur" value="grijs-zilver"> Grijs en zilver</label>
+					<label><input type="radio" name="kleur" value="zwart-antraciet"> Zwart en antraciet</label>
+					<label><input type="radio" name="kleur" value="beige-wit"> Beige en wit</label>
+				</fieldset>
+
+				<!-- radio en geen button, want je mag maar 1 maat kiezen. het bolletje zelf verstop ik in css met appearance none zodat het hele vakje klikbaar wordt -->
+				<fieldset>
+					<legend>Selecteer maat</legend>
+					<label><input type="radio" name="maat" value="35.5"> EU 35.5</label>
+					<label><input type="radio" name="maat" value="36"> EU 36</label>
+					<label><input type="radio" name="maat" value="36.5"> EU 36.5</label>
+					<label><input type="radio" name="maat" value="37.5"> EU 37.5</label>
+					<label><input type="radio" name="maat" value="38"> EU 38</label>
+					<label><input type="radio" name="maat" value="38.5"> EU 38.5</label>
+					<label><input type="radio" name="maat" value="39"> EU 39</label>
+					<label><input type="radio" name="maat" value="40"> EU 40</label>
+					<label><input type="radio" name="maat" value="40.5"> EU 40.5</label>
+					<label><input type="radio" name="maat" value="41"> EU 41</label>
+					<label><input type="radio" name="maat" value="42"> EU 42</label>
+					<label><input type="radio" name="maat" value="42.5"> EU 42.5</label>
+					<!-- deze maat op disabled, dan kun je hem niet aanklikken en slaat de browser hem ook over met tab -->
+					<label><input type="radio" name="maat" value="43" disabled> EU 43 (uitverkocht)</label>
+					<label><input type="radio" name="maat" value="44"> EU 44</label>
+					<label><input type="radio" name="maat" value="44.5"> EU 44.5</label>
+					<label><input type="radio" name="maat" value="45"> EU 45</label>
+					<label><input type="radio" name="maat" value="45.5"> EU 45.5</label>
+					<label><input type="radio" name="maat" value="46"> EU 46</label>
+					<label><input type="radio" name="maat" value="47"> EU 47</label>
+					<label><input type="radio" name="maat" value="47.5"> EU 47.5</label>
+					<label><input type="radio" name="maat" value="48.5"> EU 48.5</label>
+					<label><input type="radio" name="maat" value="49.5"> EU 49.5</label>
+				</fieldset>
+
+				<a href="index.html">Bekijk de maatwijzer</a>
+
+				<p>Achteraf betalen is beschikbaar bij het afrekenen.</p>
+
+				<button type="submit">Voeg toe aan winkelmandje</button>
+
+				<button type="button">Markeer als favoriet</button>
+
+			</form>
+
+			<p>Dit product komt niet in aanmerking voor promoties en kortingen op de site.</p>
+
+			<p>Niet zeker van je maat? <a href="index.html">Zoek een store bij jou in de buurt</a></p>
+
+			<p>De P-6000 leent zijn vorm van de hardloopschoenen uit de jaren negentig en maakt er een schoen van voor elke dag. Licht genoeg om de hele dag te dragen, met genoeg demping om er ook mee te kunnen rennen.</p>
+
+			<ul>
+				<li>Kleur: wit, grijs en zwart</li>
+				<li>Artikelnummer: CD6404-002</li>
+				<li>Bovenwerk van mesh met kunstleren details</li>
+			</ul>
+
+			<details>
+				<summary>Bekijk productgegevens</summary>
+				<p>Het bovenwerk bestaat uit mesh met kunstleren overlays. De tussenzool van schuim vangt je stap op en de rubberen buitenzool geeft grip op straat.</p>
+			</details>
+
+			<details>
+				<summary>Verzending en retourneren</summary>
+				<p>Bezorging duurt twee tot vier werkdagen. Je kunt je bestelling binnen dertig dagen gratis retourneren.</p>
+			</details>
+
+			<details>
+				<summary>Beoordelingen (1057)</summary>
+				<p>Deze schoen krijgt gemiddeld 4,8 van de 5 sterren. Kopers noemen vooral de pasvorm en het comfort bij langer lopen.</p>
+				<a href="index.html">Lees alle beoordelingen</a>
+			</details>
+
+		</section>
+
+		<section>
+
+			<h2>Hoe anderen het dragen</h2>
+
+			<p>Upload je foto met #nikestyle om te laten zien hoe jij de P-6000 draagt.</p>
+
+			<ul>
+				<li>
+					<img src="images/vrouw2.jpg" alt="Vrouw met pet en zonnebril op een trap in het park, in een wit shirt en korte broek">
+					<p>@nikefan</p>
+				</li>
+				<li>
+					<img src="images/vrouw3.png" alt="Vrouw in een lange grijze jas met een grijze hoodie en een pet">
+					<p>@streetstyle</p>
+				</li>
+				<li>
+					<img src="images/man4.jpg" alt="Man in een grijze longsleeve en donkerblauwe broek bij het water">
+					<p>@dailyfit</p>
+				</li>
+				<li>
+					<img src="images/manmetuitziht.jpg" alt="Man in een zwarte set bij een uitkijkpunt over de baai">
+					<p>@sneakerdagboek</p>
+				</li>
+				<li>
+					<img src="images/man5.jpg" alt="Man in een donker trainingspak met pet en schoudertas bij een betonnen muur">
+					<p>@sneakerdagboek</p>
+				</li>
+				<li>
+					<img src="images/vrouwmetp600.jpg" alt="Vrouw in een grijze top en blauwe cargobroek bij een wit hek">
+					<p>@sneakerdagboek</p>
+				</li>
+			</ul>
+
+		</section>
+
+		<section>
+
+			<h2>Maak de look af</h2>
+
+			<ul>
+				<li>
+					<img src="images/asianguy.jpg" alt="Man in een donkere blazer met roze hoodie en grijze joggingbroek">
+					<h3>Klaar voor de stad</h3>
+				</li>
+				<li>
+					<img src="images/chiensevrouw.jpg" alt="Vrouw in een blauwgroene set met een tas over haar schouder">
+					<h3>Rustige basis</h3>
+				</li>
+				<li>
+					<img src="images/matchameid.jpg" alt="Vrouw in een grijze jas en zwarte legging in een stoel met een drankje">
+					<h3>Warm ingepakt</h3>
+				</li>
+			</ul>
+
+			<a href="index.html">Bekijk alle looks</a>
+
+		</section>
+
+		<section>
+
+			<h2>Ontdek de Nike P-6000</h2>
+			<!-- lege alt want dit pijltje is alleen versiering, een screenreader hoeft dat niet voor te lezen -->
+			<img src="images/scroll dowb icon.png" alt="">
+			<img src="images/manmetlegging.avif" alt="Man met vlechten in een muts en een zwarte jas over een zwart shirt">
+			<h3>Traditionele hardloopstijl</h3>
+			<p>De vorm komt van de hardloopschoenen uit de jaren tweeduizend. Die lijnen zijn gebleven, de rest is bijgewerkt.</p>
+
+			<img src="images/ingezooomde p600.avif" alt="Het zwarte bovenwerk van de Nike P-6000 van heel dichtbij">
+			<h3>Gemaakt voor comfort</h3>
+			<p>De tussenzool van schuim vangt je stap op, zodat je er ook een hele dag op kunt staan.</p>
+
+			<img src="images/ingezoomdopzool.avif" alt="Het profiel van de buitenzool van de Nike P-6000 van heel dichtbij">
+			<h3>Rotsvaste grip</h3>
+			<p>De rubberen buitenzool met golfprofiel houdt je op de been, ook als het nat is.</p>
+
+		</section>
+
+		<section>
+
+			<h2>Misschien vind je dit ook leuk</h2>
+
+			<!-- 5 producten, je ziet er ongeveer 3 en de rest scroll je erbij. hier was geen javascript voor nodig, scroll-snap in css doet het werk -->
+			<ul>
+				<li>
+					<a href="index.html"><img src="images/qqlawi.avif" alt="De Nike P-6000 in zwart met een lichtblauwe swoosh van de zijkant"></a>
+					<h3>Nike P-6000</h3>
+					<p>Herenschoenen</p>
+					<p>&euro; 109,99</p>
+				</li>
+				<li>
+					<a href="index.html"><img src="images/NIKE+AIR+LIQUID+MAX+AW.avif" alt="De Nike Air Max in helemaal zwart van de zijkant"></a>
+					<h3>Nike Air Max</h3>
+					<p>Herenschoenen</p>
+					<p>&euro; 139,99</p>
+				</li>
+				<li>
+					<a href="index.html"><img src="images/Screenshot 2026-09-28 180601.png" alt="De Nike P-6000 in donkergroen en zwart van de zijkant"></a>
+					<h3>Nike P-6000</h3>
+					<p>Herenschoenen</p>
+					<p>&euro; 89,99</p>
+				</li>
+				<li>
+					<a href="index.html"><img src="images/p[.png" alt="De Nike P-6000 in helemaal zwart van de zijkant"></a>
+					<h3>Nike P-6000</h3>
+					<p>Herenschoenen</p>
+					<p>&euro; 87,49</p>
+				</li>
+				<li>
+					<a href="index.html"><img src="images/NIKE+MIND+001.avif" alt="Een paar roze Nike slippers"></a>
+					<h3>Nike Mind</h3>
+					<p>Schoenen</p>
+					<p>&euro; 129,99</p>
+				</li>
+			</ul>
+
+		</section>
+
+	</main>
+
+	<footer>
+
+		<nav aria-label="Footermenu">
+			<details>
+				<summary>Bronnen</summary>
+				<ul>
+					<li><a href="index.html">Cadeaubonnen</a></li>
+					<li><a href="index.html">Zoek een store</a></li>
+					<li><a href="index.html">Nike Journal</a></li>
+					<li><a href="index.html">Word member</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Help</summary>
+				<ul>
+					<li><a href="index.html">Bestelstatus</a></li>
+					<li><a href="index.html">Verzending en levering</a></li>
+					<li><a href="index.html">Retourzendingen</a></li>
+					<li><a href="index.html">Betaalmethodes</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Bedrijf</summary>
+				<ul>
+					<li><a href="index.html">Over Nike</a></li>
+					<li><a href="index.html">Nieuws</a></li>
+					<li><a href="index.html">Werken bij Nike</a></li>
+					<li><a href="index.html">Toegankelijkheid</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>Communitykortingen</summary>
+				<ul>
+					<li><a href="index.html">Student</a></li>
+					<li><a href="index.html">Docent</a></li>
+					<li><a href="index.html">Eerstehulpverleners</a></li>
+					<li><a href="index.html">Zorgprofessionals</a></li>
+				</ul>
+			</details>
+		</nav>
+
+		<small>&copy; 2026 Nike, Inc. Schoolopdracht van Younes Benzian.</small>
+
+		<nav aria-label="Voorwaarden">
+			<ul>
+				<li><a href="index.html">Gebruiksvoorwaarden</a></li>
+				<li><a href="index.html">Verkoopvoorwaarden</a></li>
+				<li><a href="index.html">Bedrijfsgegevens</a></li>
+				<li><a href="index.html">Privacy- en cookiebeleid</a></li>
+			</ul>
+		</nav>
+
+	</footer>
+
+</body>
+
+</html>
