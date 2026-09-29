@@ -1,0 +1,166 @@
+/* de 6 banners. position relative is nodig zodat de foto erin zich aan de section vastpakt */
+/* align-content end duwt de tekst naar de onderkant, zo staat het ook op de nike site */
+main section:nth-of-type(1),
+main section:nth-of-type(2),
+main section:nth-of-type(3),
+main section:nth-of-type(4),
+main section:nth-of-type(5),
+main section:nth-of-type(6) {
+	position: relative;
+	display: grid;
+	align-content: end;
+	aspect-ratio: 4 / 5;
+	color: #ffffff;
+	margin-top: 0.5rem;
+}
+
+/* de foto vult de hele section en gaat met z-index -1 achter de tekst langs. brightness maakt hem donkerder zodat witte tekst leesbaar blijft */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position */
+
+main section > img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(60%);
+}
+/* z-index is eigenlijk de ctrl { van css */
+main section:nth-of-type(1) > img {
+	object-position: top;
+}
+
+main section > a {
+	justify-self: start;
+	background-color: #ffffff;
+	color: #111111;
+}
+
+main section:nth-of-type(7) {
+	text-align: center;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid */
+/* gap trekt eerst de ruimte ervanaf en dan kan die 1fr 1fr 1fr de ruimte goed verdelen */
+main section:nth-of-type(7) > ul {
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: var(--ruimte);
+}
+
+main section:nth-of-type(7) li:nth-child(n + 7) {
+	display: none;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child - voor list en in dit geval de resterende items die pas zichtbaar worden na responsive */
+
+main section:nth-of-type(7) h3 a {
+	font-size: 0.9rem;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+main section:nth-of-type(7) > a {
+	border: 0.1rem solid var(--kleur-lijn);
+	background-color: transparent;
+}
+
+main ul {
+	display: grid;
+	gap: 2rem;
+}
+
+main ul ul {
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+main li img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 38em) {
+
+	main section:nth-of-type(7) > ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	main section:nth-of-type(7) li:nth-child(n + 7) {
+		display: block;
+	}
+
+	main section:nth-of-type(7) > a {
+		display: none;
+	}
+
+	main section:nth-of-type(8) > ul {
+		grid-template-columns: 1fr 1fr;
+	}
+main section:nth-of-type(6) img {
+	object-position: top;
+	/* object-fit: none; */
+	/* foto is te small om de breedte in te vullen */
+}
+}
+
+@media (min-width: 57em) {
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.8rem;
+	}
+
+	/* deze vier mogen over allebei de kolommen. grid-column 1 / 3 betekent van lijn 1 tot lijn 3, dus de hele breedte */ 
+	main section:nth-of-type(1),
+	main section:nth-of-type(6),
+	main section:nth-of-type(7),
+	main section:nth-of-type(8) {
+		grid-column: 1 / 3;
+	}
+
+	main section:nth-of-type(1),
+	main section:nth-of-type(6) {
+		aspect-ratio: 16 / 9;
+	}
+
+	/* max-width maakt ze smaller en justify-self duwt ze om en om naar rechts en links, zo staan ze op de nike site gecentreerd met ruimte ernaast */
+	/* de width 100% moet erbij, anders wordt de section net zo breed als de tekst erin en dat verschilt per banner */
+	main section:nth-of-type(2),
+	main section:nth-of-type(3),
+	main section:nth-of-type(4),
+	main section:nth-of-type(5) {
+		width: 100%;
+		max-width: 40rem;
+	}
+
+	main section:nth-of-type(2),
+	main section:nth-of-type(4) {
+		justify-self: end;
+	}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content */
+	main section:nth-of-type(3),
+	main section:nth-of-type(5) {
+		justify-self: start;
+	}
+
+	main section:nth-of-type(7) > ul {
+		gap: 2rem;
+	}
+
+	/* Alle fotos kleiner gemaakt, met max-width en margin-inline auto zodat de overgebleven ruimte beter verdeeld wordt, wel vraag ik me af waarom alleen bij auto dit kan en niet als je bijv 2 vaste waarders aangeeft. */
+	main section:nth-of-type(7) img {
+		max-width: 8rem;
+		margin-inline: auto;
+	}
+
+	main section:nth-of-type(8) > ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+}

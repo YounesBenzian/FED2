@@ -1,0 +1,306 @@
+/* de eerste p is de categorie en de tweede de prijs. daarom nth-of-type, anders pak ik alle p van de pagina */
+main section:nth-of-type(1) > p:nth-of-type(1) {
+	color: var(--kleur-gedempt);
+}
+
+main section:nth-of-type(1) > p:nth-of-type(2) {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow */
+/* de fotos naast elkaar met overflow-x auto zodat je zijwaarts kan scrollen */
+/* scroll-snap zorgt dat hij netjes op een foto stopt en niet ergens halverwege twee fotos */
+main section:nth-of-type(1) > ul:first-of-type {
+	display: flex;
+	gap: 0.5rem;
+	overflow-x: auto;
+	margin: var(--ruimte) 0;
+	padding-bottom: 0.5rem;
+	scroll-snap-type: x mandatory;
+}
+
+main section:nth-of-type(1) > ul:first-of-type li {
+	flex-shrink: 0;
+	width: 85%;
+	scroll-snap-align: center;
+}
+
+main li img {
+	width: 100%;
+	object-fit: cover;
+	background-color: var(--kleur-vlak);
+}
+
+main section:nth-of-type(1) > ul:first-of-type img {
+	aspect-ratio: 1 / 1;
+}
+
+main section:nth-of-type(1) > ul:last-of-type {
+	margin: var(--ruimte) 0;
+	color: var(--kleur-gedempt);
+}
+
+main legend {
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+main fieldset {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: var(--ruimte);
+	border: none;
+}
+
+main fieldset label {
+	position: relative;
+	padding: 0.7rem 0.9rem;
+	border: 0.1rem solid var(--kleur-lijn);
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+
+/* de radio ligt met vier nullen over het hele label heen en appearance none haalt het bolletje weg */
+/* zo is het hele vakje klikbaar maar is het voor een screenreader nog steeds gewoon een radio */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/appearance */
+main fieldset input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	appearance: none;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+
+main fieldset input:checked {
+	border: 0.15rem solid var(--kleur-tekst);
+}
+
+/* alleen de maten in 3 kolommen. met flex-wrap lukte het ook wel, maar dan werden de vakjes niet allemaal even breed */
+main fieldset:last-of-type {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+main fieldset:last-of-type label {
+	padding-inline: 0.4rem;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+main form > a {
+	display: inline-block;
+	margin-bottom: var(--ruimte);
+}
+
+main form > p {
+	color: var(--kleur-gedempt);
+	font-size: 0.9rem;
+}
+
+main form button {
+	width: 100%;
+}
+
+/* deze code was bedoeld voor de sticky voeg toe aan winkelmand */
+/* main form button {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: auto;
+	border-radius: 0;
+} */
+
+
+body {
+	padding-bottom: 5rem;
+}
+
+main form button[type="button"] {
+	border-color: var(--kleur-lijn);
+	background-color: transparent;
+	color: var(--kleur-tekst);
+}
+
+main summary {
+	padding: 0.9rem 0;
+	border-top: 0.1rem solid var(--kleur-lijn);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+main details p {
+	padding-bottom: 0.9rem;
+	color: var(--kleur-gedempt);
+}
+
+main section:nth-of-type(2) ul,
+main section:nth-of-type(3) ul,
+main section:nth-of-type(5) ul {
+	display: flex;
+	gap: var(--ruimte);
+	overflow-x: auto;
+	padding-bottom: var(--ruimte);
+	scroll-snap-type: x mandatory;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-shrink */
+main section:nth-of-type(2) li,
+main section:nth-of-type(3) li,
+main section:nth-of-type(5) li {
+	flex-shrink: 0;
+	width: 40%;
+	scroll-snap-align: start;
+}
+
+main section:nth-of-type(3) li {
+	width: 70%;
+}
+
+/* Als ik flex-shrink op 1 doe en dan responsive doet dat staan ze niet gelijk maar dat staat wel op mdn als voorbeeld */
+main section:nth-of-type(2) img,
+main section:nth-of-type(3) img,
+main section:nth-of-type(5) img {
+	aspect-ratio: 3 / 4;
+	margin-bottom: 0.9rem;
+}
+
+main section:nth-of-type(5) li > a {
+	display: block;
+	margin-top: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+main section:nth-of-type(2) li p {
+	color: var(--kleur-gedempt);
+	font-size: 0.9rem;
+}
+
+main section:nth-of-type(4) {
+	text-align: center;
+}
+/* https://www.w3schools.com/tools/tool_aspect_ratio.php
+aspect ratio calculator */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio */
+main section:nth-of-type(4) > img {
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+	object-position: top;
+	margin-bottom: var(--ruimte);
+}
+
+main section:nth-of-type(4) h3 {
+	font-weight: 400;
+}
+
+main section:nth-of-type(4) > img:first-of-type {
+	width: 2rem;
+	aspect-ratio: auto;
+	margin-inline: auto;
+	margin-bottom: 4.5rem;
+}
+
+main section:nth-of-type(4) p {
+	margin-bottom: 2.5rem;
+}
+
+@media (min-width: 38em) {
+
+	main section:nth-of-type(1) > ul:first-of-type li {
+		width: 45%;
+	}
+
+	main form button{
+		position: static;
+		width: 100%;
+		border-radius: 2rem;
+	}
+
+	body {
+		padding-bottom: 0;
+	}
+
+	main section:nth-of-type(3) ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		overflow: visible;
+	}
+
+	main section:nth-of-type(3) li {
+		width: auto;
+	}
+
+	main section:nth-of-type(4) > img {
+		aspect-ratio: 16 / 9;
+		max-width: 45rem;
+		margin-inline: auto;
+	}
+
+	main section:nth-of-type(4) p {
+		max-width: 40rem;
+		margin-inline: auto;
+	}
+
+
+}
+
+@media (min-width: 57em) {
+
+	main > section {
+		max-width: 75rem;
+		margin-inline: auto;
+	}
+
+	main section:nth-of-type(1) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 3rem;
+		align-items: start;
+	}
+
+	
+	
+	/* min-width 0 moet erbij, anders duwt de grote foto de kolom breder dan de pagina en krijg je een scrollbalk onderin */
+	main section:nth-of-type(1) > ul:first-of-type {
+		display: grid;
+		grid-template-columns: 5rem 1fr;
+		grid-column: 1;
+		grid-row: 1 / span 11;
+		min-width: 0;
+		overflow: visible;
+		margin-top: 0;
+	}
+
+	main section:nth-of-type(1) > ul:first-of-type li {
+		width: auto;
+	}
+/* uitleg over grid in een grid gekregen van claude (anthropic, 2026), zelf getypt en aangepast */
+	/* alleen de eerste foto zet ik zelf neer in kolom 2, de rest vult de browser vanzelf aan in het smalle kolommetje links */
+	main section:nth-of-type(1) > ul:first-of-type li:first-child {
+		grid-column: 2;
+		grid-row: 1 / span 5;
+	}
+
+	main section:nth-of-type(1) > ul:first-of-type li:first-child img {
+		height: 100%;
+	}
+
+	main section:nth-of-type(2) {
+		max-width: none;
+	}
+
+	main section:nth-of-type(2) li {
+		width: 23%;
+	}
+
+	main section:nth-of-type(5) li {
+		width: 32%;
+	}
+
+}

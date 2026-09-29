@@ -1,31 +1,328 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+/* reset. alles op nul zodat ik zelf bepaal waar er ruimte komt en niet de browser */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/--* */
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--kleur-tekst: #111111;
+	--kleur-achtergrond: #ffffff;
+	--kleur-gedempt: #5c5c5c;
+	--kleur-lijn: #dedede;
+	--kleur-vlak: #f5f5f5;
+	--kleur-accent: #c23b00;
+
+	--ruimte: 1rem;
 }
 
+/* pakt vanzelf de donkere kleuren als je telefoon op dark staat. NIKE HEEFT ZELF GEEN DARKMODE SIRE */
+@media (prefers-color-scheme: dark) {
 
+	:root {
+		--kleur-tekst: #f2f2f2;
+		--kleur-achtergrond: #101010;
+		--kleur-gedempt: #b3b3b3;
+		--kleur-lijn: #3a3a3a;
+		--kleur-vlak: #1c1c1c;
+		--kleur-accent: #ff8a5c;
+	}
 
+}
 
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	color: var(--kleur-tekst);
+	background-color: var(--kleur-achtergrond);
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+main h1 {
+	text-transform: uppercase;
+}
 
-/* jouw code */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	color: var(--kleur-tekst);
+}
+
+:focus-visible {
+	outline: 0.2rem solid var(--kleur-accent);
+	outline-offset: 0.2rem;
+}
+
+/* de skiplink parkeer ik links buiten beeld. met display none zou het niet werken, dan kun je er ook niet meer naartoe tabben */
+body > a:first-child {
+	position: absolute;
+	left: -100vw;
+}
+
+body > a:first-child:focus {
+	position: static;
+	display: block;
+	padding: var(--ruimte);
+	background-color: var(--kleur-accent);
+	color: var(--kleur-achtergrond);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	gap: var(--ruimte);
+	padding: 0.75rem var(--ruimte);
+	border-bottom: 0.1rem solid var(--kleur-lijn);
+}
+
+header img {
+	width: 1.4rem;
+}
+
+header > a img {
+	width: 3.5rem;
+}
+
+header > button {
+	padding: 0.5rem 0.7rem;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+}
+
+header nav[aria-label="Snelmenu"] {
+	margin-left: auto;
+}
+
+header nav[aria-label="Snelmenu"] ul {
+	display: flex;
+	gap: 1.2rem;
+}
+
+/* het uitschuifmenu. hij staat standaard rechts buiten beeld met translate, javascript zet de class open erop en dan schuift hij naar binnen */
+/* visibility hidden staat erbij zodat je er niet per ongeluk naartoe kan tabben terwijl hij dicht is */
+nav[aria-label="Hoofdmenu"] {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 70%;
+	padding: 5rem 1.5rem;
+	border-left: 0.1rem solid var(--kleur-lijn);
+	background-color: var(--kleur-vlak);
+	translate: 100% 0;
+	visibility: hidden;
+	transition: translate 0.3s, visibility 0.3s;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translate */
+nav[aria-label="Hoofdmenu"].open {
+	translate: 0 0;
+	visibility: visible;
+}
+
+nav[aria-label="Hoofdmenu"] ul {
+	display: grid;
+	gap: 0.75rem;
+}
+
+nav[aria-label="Hoofdmenu"] a {
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+nav[aria-label="Hoofdmenu"] a[aria-current="page"] {
+	text-decoration: underline;
+}
+
+main > section {
+	padding: 3rem var(--ruimte);
+}
+
+main h2,
+main h3 {
+	margin-bottom: 0.5rem;
+}
+
+/* de zwarte pil van nike. het is gwn een link, maar met een border-radius van 2rem ziet hij eruit als een knop */
+main section > a,
+main section li > a {
+	display: inline-block;
+	margin-top: 0.75rem;
+	padding: 0.6rem 1.4rem;
+	border-radius: 2rem;
+	background-color: var(--kleur-tekst);
+	color: var(--kleur-achtergrond);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+main ul ul a {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	color: var(--kleur-gedempt);
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+main ul ul a:hover {
+	color: var(--kleur-tekst);
+}
+
+main button {
+	margin-top: 0.75rem;
+	padding: 0.7rem 1.4rem;
+	border: 0.1rem solid var(--kleur-tekst);
+	border-radius: 2rem;
+	background-color: var(--kleur-tekst);
+	color: var(--kleur-achtergrond);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+footer {
+	padding: 2rem var(--ruimte);
+	border-top: 0.1rem solid var(--kleur-lijn);
+	background-color: var(--kleur-vlak);
+}
+
+footer summary {
+	padding: 0.6rem 0;
+	border-bottom: 0.1rem solid var(--kleur-lijn);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+footer nav ul {
+	display: grid;
+	gap: 0.5rem;
+	padding: 0.75rem 0;
+}
+
+footer nav[aria-label="Voorwaarden"] ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--ruimte);
+	padding: 0;
+}
+
+footer a {
+	color: var(--kleur-gedempt);
+}
+
+footer small {
+	display: block;
+	margin-top: var(--ruimte);
+	color: var(--kleur-gedempt);
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media */
+/* vanaf hier past het menu gewoon in de header, dus de hamburger gaat weg en het uitschuifmenu wordt een normaal rijtje */
+@media (min-width: 38em) {
+
+	header {
+		padding-inline: 2rem;
+	}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display */
+	header > button {
+		display: none;
+	}
+
+	/* met order zet ik het logo links, het menu in het midden en het snelmenu rechts, zonder de volgorde in de html om te gooien */
+	header > a {
+		order: 1;
+	}
+
+	header nav[aria-label="Snelmenu"] {
+		order: 3;
+		margin-left: 0;
+	}
+
+	nav[aria-label="Hoofdmenu"] {
+		order: 2;
+		margin-inline: auto;
+		position: static;
+		width: auto;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		translate: none;
+		visibility: visible;
+	}
+
+	nav[aria-label="Hoofdmenu"] ul {
+		display: flex;
+	}
+
+	nav[aria-label="Hoofdmenu"] a {
+		font-size: 0.9rem;
+	}
+
+	main > section {
+		padding-inline: 2rem;
+	}
+
+	footer {
+		padding-inline: 2rem;
+	}
+
+	footer nav[aria-label="Footermenu"] {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+}
+
+@media (min-width: 57em) {
+
+	header,
+	main > section,
+	footer {
+		padding-inline: 4rem;
+	}
+
+	nav[aria-label="Hoofdmenu"] ul {
+		gap: 1.5rem;
+	}
+
+	nav[aria-label="Hoofdmenu"] a {
+		font-size: 1rem;
+	}
+
+	main h1 {
+		font-size: 3rem;
+	}
+
+	footer nav[aria-label="Footermenu"] {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+}
+
+/* sommige mensen hebben animaties uitstaan*/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms;
+	}
+
+}
