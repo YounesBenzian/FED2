@@ -36,9 +36,11 @@
 		</nav>
 
 		<!-- ariacontrols moet naar een id wijzen, daarom heb ik hier toch een id gebruikt. zonder id kon ik nergens naar verwijzen -->
-		<button type="button" aria-controls="hoofdmenu" aria-expanded="false">
-			<img src="images/menu.svg" alt="Menu">
-		</button>
+		 
+		<button type="button" aria-label="Hamburgermenu" aria-controls="hoofdmenu" aria-expanded="false">
+	<img src="images/menu.svg" alt="">
+	<!-- alt leeg laten zodat het niet 2x iets opleest -->
+</button>
 
 		<nav id="hoofdmenu" aria-label="Hoofdmenu">
 			<ul>
@@ -100,6 +102,7 @@
 		</section>
 
 		<section>
+
 			<h2>Shop onze iconen</h2>
 
 			<!-- 14 stuks, maar op mobiel laat ik er maar 6 zien met nth-child(n + 7). alternatief was 2 aparte lijstjes maken maar dan staat alles dubbel in de html -->
@@ -212,15 +215,21 @@
 
 	<footer>
 
-		
-		<nav aria-label="Footermenu">
-			<details>
+		<nav>
+
+			<!-- alleen dit blok staat standaard open met het open attribuut, de rest klap je zelf uit -->
+			<details open>
 				<summary>Bronnen</summary>
 				<ul>
 					<li><a href="detail.html">Cadeaubonnen</a></li>
+					<li><a href="detail.html">Zakelijke cadeaubonnen</a></li>
 					<li><a href="detail.html">Zoek een store</a></li>
 					<li><a href="detail.html">Nike Journal</a></li>
 					<li><a href="detail.html">Word member</a></li>
+					<li><a href="detail.html">Feedback</a></li>
+					<li><a href="detail.html">Promotiecodes</a></li>
+					<li><a href="detail.html">Productadvies</a></li>
+					<li><a href="detail.html">Running Shoe Finder</a></li>
 				</ul>
 			</details>
 			<details>
@@ -241,6 +250,7 @@
 					<li><a href="detail.html">Toegankelijkheid</a></li>
 				</ul>
 			</details>
+
 			<details>
 				<summary>Communitykortingen</summary>
 				<ul>
