@@ -7,9 +7,11 @@ main section:nth-of-type(1) > p:nth-of-type(2) {
 	font-size: 1.25rem;
 	font-weight: 600;
 }
+
+/* uiteindelijk ipv grid in een grid heb ik flexbox gebruikt en bij een grotere breedte heb ik grid gebruikt */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow */
 /* de fotos naast elkaar met overflow-x auto zodat je zijwaarts kan scrollen */
-/* scroll-snap zorgt dat hij netjes op een foto stopt en niet ergens halverwege twee fotos */
+/* scroll-snap zorgt dat hij netjes op een foto stopt en niet ergens halverwege twee fotos tenzij je deze inveort scroll-snap-type: y proximity; */
 main section:nth-of-type(1) > ul:first-of-type {
 	display: flex;
 	gap: 0.5rem;
@@ -127,15 +129,44 @@ main form button[type="button"] {
 	color: var(--kleur-tekst);
 }
 
+/* zelfde opzet als in de footer: titel links, pijltje rechts */
 main summary {
-	padding: 0.9rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
 	border-top: 0.1rem solid var(--kleur-lijn);
 	font-weight: 600;
 	cursor: pointer;
+	list-style: none;
+}
+
+main summary::after {
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	border-right: 0.1rem solid var(--kleur-tekst);
+	border-bottom: 0.1rem solid var(--kleur-tekst);
+	rotate: 45deg;
+}
+
+main details[open] summary::after {
+	rotate: 225deg;
+}
+
+/* een streepje onder de laatste, anders loopt het rijtje onderaan zomaar af */
+main details:last-of-type {
+	border-bottom: 0.1rem solid var(--kleur-lijn);
 }
 
 main details p {
-	padding-bottom: 0.9rem;
+	padding-bottom: 1rem;
+	color: var(--kleur-gedempt);
+}
+
+main details a {
+	display: inline-block;
+	padding-bottom: 1rem;
 	color: var(--kleur-gedempt);
 }
 

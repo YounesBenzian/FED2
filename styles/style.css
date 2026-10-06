@@ -198,20 +198,51 @@ main button {
 footer {
 	padding: 2rem var(--ruimte);
 	border-top: 0.1rem solid var(--kleur-lijn);
-	background-color: var(--kleur-vlak);
+	/* background-color: var(--kleur-vlak); */
 }
 
+/* met flex zet ik de titel links en het pijltje rechts, net als op de nike site */
+/* list-style none haalt het standaard driehoekje van de browser weg */
 footer summary {
-	padding: 0.6rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
 	border-bottom: 0.1rem solid var(--kleur-lijn);
 	font-weight: 700;
 	cursor: pointer;
+	list-style: none;
+}
+
+/* het pijltje is een leeg vierkantje waarvan ik alleen twee randen teken en dat ik een kwartslag draai */
+footer summary::after {
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	border-right: 0.1rem solid var(--kleur-tekst);
+	border-bottom: 0.1rem solid var(--kleur-tekst);
+	rotate: 45deg;
+}
+
+/* staat het blok open, dan draai ik het pijltje de andere kant op */
+footer details[open] summary::after {
+	rotate: 225deg;
 }
 
 footer nav ul {
 	display: grid;
-	gap: 0.5rem;
-	padding: 0.75rem 0;
+	gap: 0.75rem;
+	padding: 1rem 0;
+}
+
+footer nav a {
+	display: inline-block;
+	padding: 0.2rem 0;
+	text-decoration: none;
+}
+
+footer nav a:hover {
+	text-decoration: underline;
 }
 
 footer nav[aria-label="Voorwaarden"] ul {
@@ -227,7 +258,7 @@ footer a {
 
 footer small {
 	display: block;
-	margin-top: var(--ruimte);
+	margin-top: 2rem;
 	color: var(--kleur-gedempt);
 }
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media */
@@ -264,9 +295,9 @@ footer small {
 		visibility: visible;
 	}
 
-	nav[aria-label="Hoofdmenu"] ul {
-		display: flex;
-	}
+		nav[aria-label="Hoofdmenu"] ul {
+			display: flex;
+		}
 
 	nav[aria-label="Hoofdmenu"] a {
 		font-size: 0.9rem;
@@ -280,13 +311,22 @@ footer small {
 		padding-inline: 2rem;
 	}
 
-	footer nav[aria-label="Footermenu"] {
+		
+	footer nav:first-of-type {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1.5rem;
 		align-items: start;
 	}
 
+	footer summary {
+		padding-top: 0;
+		border-bottom: none;
+	}
+
+	footer summary::after {
+		display: none;
+	}
 }
 
 @media (min-width: 57em) {
@@ -309,7 +349,7 @@ footer small {
 		font-size: 3rem;
 	}
 
-	footer nav[aria-label="Footermenu"] {
+	footer nav:first-of-type {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
