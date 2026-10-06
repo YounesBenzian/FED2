@@ -149,10 +149,15 @@ Nike.nl
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
-
+<img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_1.png">
+<img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_2.png">
+<img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_3.png">
+<img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_4.png">
+<img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_5.png">
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+ ---> Nike heeft geen dark mode, dit heb ik wel in mijn site.
 
+Voor de rest ging alles goed,contrasten zijn duidelijk en nike heeft een pause button bij de mediaplayer in de eerste sectie.
 </details>
 
 
@@ -260,10 +265,30 @@ Responsive https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@
 fieldset https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/appearance
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
 Anthropic. (2026). Claude [Large language model]. https://claude.ai
-
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/change_event
+https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
 
 Hoe heb ik AI gebruikt?
 --> Ik had 1 bestand gebruikt als speeltuin, hier kon ik mijn code erin zetten en meerdere dingen bewust chaotisch door elkaar heen doen zodat ik wist wat de gevolgen waren.
 
 --> Ik heb Claude Anthropic gebruikt om bepaalde codes uit te leggen als ik er niet doorheen kwam bij mdm mozilla. Ook de standaard vragen die spookte door me hoofd bijvoorbeeld het verschil tussen flexbox en grid en alle andere codes die naar mijn mening op elkaar lijken heb ik aan claude voor een uitleg gevraagd. Ook als een code niet werkte stuurde ik dit op en kreeg ik uitleg waarom iets niet werkte en hoe dat dan in elkaar zit.
+
+
+
+
+Aria labels weg bij plekken waar het niet nodig is en wel bij HAMBURGER MENU
+Footer fixen (details Summary)
+WCAG Checklist doen
+
+
+
+FEEDBACK VERWERKT:
+- Nav-Aria-label weggehaald bij de footer en geplaatst bij hamburger menu en gekeken waar het wel kan.
+- WCAG checklist gemaakt.
+- Details gefixt
+- Footer gefixt.
+----- Dit moest uiteindelijk met javascript. In HTML kon ik wel het eerste blokje op <open> zetten maar op de nike site zelf klappen ze allemaal uit zodra je meer breedte hebt. in principe kon dit misschien met 2 footers en dan 1 op visible zetten bij @media, alleen ben ik bang dat de screenreader dit 2 keer zal lezen.
+
+
 </details>
