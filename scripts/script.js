@@ -20,3 +20,17 @@ function sluitMetEscape(event) {
 		menuKnop.focus();
 	}
 }
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+// https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/change_event
+// https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+const breedGenoeg = window.matchMedia("(min-width: 38em)");
+
+function wisselFooterblokken() {
+	document.querySelectorAll("footer details").forEach(function (blok, nummer) {
+		blok.open = breedGenoeg.matches || nummer === 0;
+	});
+}
+
+wisselFooterblokken();
+breedGenoeg.addEventListener("change", wisselFooterblokken);		
+// Dit schijnt de enigste manier te zijn om de details open te klappen oftewel responsive te maken zodra de breedte aanpast, in html heb ik het eerste blokje <open> gegeven maar dit kan niet anders laten functioneren in css
