@@ -154,8 +154,16 @@ Nike.nl
 <img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_3.png">
 <img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_4.png">
 <img src="readme-images/FED 25-26 - Blok 1 - WCAG checklist.pdf_Page_5.png">
+ 
   ### Bevindingen
- ---> Nike heeft geen dark mode, dit heb ik wel in mijn site.
+ TEST 1
+ ----> Alles ging eigenljk prima, elke afbeelding heeft een alt. Je kan tot 200% inzoomen max op de site (verder dan 200 niet). Nike heeft vee verschillende kleuren maar toch onderscheiden ze zich van elkaar. Ook kan je de animaties uit zetten bij de sliders. 
+ Grote MINpunt = Nike heeft geen Darkmode
+
+
+TEST 2
+Tijdens het testen van mijn site ben ik niet op fouten gekomen. Ik heb wel een darkmode toegevoegd alhoewel dit er onnatuurlijk uitziet voor een "nike" website.
+
 
 Voor de rest ging alles goed,contrasten zijn duidelijk en nike heeft een pause button bij de mediaplayer in de eerste sectie.
 </details>
